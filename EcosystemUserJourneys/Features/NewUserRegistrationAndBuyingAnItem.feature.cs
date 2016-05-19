@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace EcosystemUserJourneys.Features
+namespace EcosystemUserJourneys.AcceptanceTests.Features
 {
     using TechTalk.SpecFlow;
     
