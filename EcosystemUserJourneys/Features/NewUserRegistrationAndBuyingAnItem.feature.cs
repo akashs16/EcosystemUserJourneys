@@ -64,11 +64,11 @@ namespace EcosystemUserJourneys.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("New user buying Reebonz item")]
+        [NUnit.Framework.DescriptionAttribute("New user buying Reebonz item or itmes")]
         [NUnit.Framework.TestCaseAttribute("chrome", "1", "Reebonz", new string[0])]
-        public virtual void NewUserBuyingReebonzItem(string browser, string number, string merchantType, string[] exampleTags)
+        public virtual void NewUserBuyingReebonzItemOrItmes(string browser, string number, string merchantType, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New user buying Reebonz item", exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New user buying Reebonz item or itmes", exampleTags);
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
@@ -86,11 +86,11 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("New user buying market place item")]
+        [NUnit.Framework.DescriptionAttribute("New user buying market place item or items")]
         [NUnit.Framework.TestCaseAttribute("chrome", "1", "market place", new string[0])]
-        public virtual void NewUserBuyingMarketPlaceItem(string browser, string number, string merchantType, string[] exampleTags)
+        public virtual void NewUserBuyingMarketPlaceItemOrItems(string browser, string number, string merchantType, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New user buying market place item", exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New user buying market place item or items", exampleTags);
 #line 15
 this.ScenarioSetup(scenarioInfo);
 #line 16

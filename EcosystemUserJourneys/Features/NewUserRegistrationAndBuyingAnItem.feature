@@ -1,7 +1,7 @@
 ﻿Feature: NewUserRegistrationAndBuyingAnItrem
 	In to verify the new user jouney of buying an item
 
-Scenario Outline: New user buying Reebonz item
+Scenario Outline: New user buying Reebonz item or itmes
 	Given I am a first time Reebonz user
 	And I am using <browser> browser
 	When I register on Reebonz
@@ -12,7 +12,7 @@ Scenario Outline: New user buying Reebonz item
 	| chrome  | 1      | Reebonz      |
 
 	
-Scenario Outline: New user buying market place item
+Scenario Outline: New user buying market place item or items
 	Given I am a first time Reebonz user
 	And I am using <browser> browser
 	When I register on Reebonz
