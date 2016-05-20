@@ -3,6 +3,7 @@ using System.Configuration;
 using EcosystemUserJourneys.PageObjects.Intractions.Identifiers;
 using EcosystemUserJourneys.TestData;
 using EcosystemUserJourneys.TestData.Model;
+using OpenQA.Selenium;
 using WebDriverAutomationFramework;
 
 namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
@@ -10,6 +11,7 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
     public class SignInAndRegistrationPageObjects
     {
         private readonly IProvidePageObjectBaseFunctions baseFunctions;
+        public readonly IWebDriver Driver;
 
         public SignInAndRegistrationPageObjects(string driver)
         {
@@ -20,6 +22,7 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 
             var factory = new BaseOperationsFactory();
             this.baseFunctions = factory.Create(driver);
+            this.Driver = baseFunctions.Driver;
         }
 
         public void OpenWebPage(string url)
