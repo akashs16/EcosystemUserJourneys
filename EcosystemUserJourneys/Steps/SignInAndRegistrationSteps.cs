@@ -1,7 +1,7 @@
 ﻿using System;
-using EcosystemUserJourneys.PageObjects.Intractions;
-using EcosystemUserJourneys.PageObjects.Intractions.PageObjects;
+using EcosystemUserJourneys.PageObjects.Intractions.FlowManagers;
 using EcosystemUserJourneys.TestData.DataSetupHelpers;
+using EcosystemUserJourneys.TestData.Enums;
 using EcosystemUserJourneys.TestData.Model;
 using TechTalk.SpecFlow;
 
@@ -11,12 +11,12 @@ namespace EcosystemUserJourneys.AcceptanceTests.Steps
     public class SignInAndRegistrationSteps
     {
         private User user;
-        private SignInAndRegistrationPageObjects signInAndRegistrationPageObject;
+        private UserJourneyManager userJourneyManager;
 
         [Given(@"I am using (.*) browser")]
         public void GivenIAmUsingBrowser(string browser)
         {
-            this.signInAndRegistrationPageObject = new SignInAndRegistrationPageObjects(browser);
+            this.userJourneyManager = new UserJourneyManager(browser);
         }
 
         [Given(@"I am a first time Reebonz user")]
@@ -29,18 +29,24 @@ namespace EcosystemUserJourneys.AcceptanceTests.Steps
         [When(@"I register on Reebonz")]
         public void WhenIRegisterOnReebonz()
         {
-            var url = new Uri("http://rbz-sit-node.azurewebsites.net/sg");
-            this.signInAndRegistrationPageObject.RegisterViaEmail(url, user);
+            this.userJourneyManager.RegisterOnReebonz(this.user, RegistrationType.ViaEmail);
         }
 
         [When(@"I try to buy (.*) numbers of items from (.*) merchant")]
-        public void WhenITryToBuyNumbersOfItemsFromReebonzMerchant(int p0, string merchantType)
+        public void WhenITryToBuyNumbersOfItemsFromReebonzMerchant(int numberOfItems, string itemTypeFromFeature)
         {
+            var itemType = EnumValueForString<ItemType>(itemTypeFromFeature);
+            this.userJourneyManager.BuyItems(numberOfItems, itemType);
         }
 
         [Then(@"I should be successfully be able to by the item or items")]
         public void ThenIShouldBeSuccessfullyBeAbleToByTheItemOrItems()
         {
+        }
+
+        private static T EnumValueForString<T>(string value)
+        {
+            return (T)Enum.Parse(typeof(T), value, true);
         }
     }
 }

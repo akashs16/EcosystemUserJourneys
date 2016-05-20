@@ -37,8 +37,6 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 
         public void RegisterViaEmail(Uri url, User user)
         {
-            OpenWebPage(url);
-
             this.baseFunctions.ClickOnElement(HomePageIdentifiers.RegistrationLink, WebElementType.CssSelector, TimeSpan.FromSeconds(2));
             this.baseFunctions.WaitForLoad(RegistrationOverlay.RegistrationModal, TimeSpan.FromSeconds(3), WebElementType.Class);
             this.baseFunctions.ClearAndSendText(RegistrationOverlay.FirstNameTextField, WebElementType.Id, user.FirstName);

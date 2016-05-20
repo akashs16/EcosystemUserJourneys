@@ -43,6 +43,8 @@
     <Compile Include="Constants.cs" />
     <Compile Include="DataGenerators\UserDataGenerator.cs" />
     <Compile Include="DataSetupHelpers\UserCreationHelper.cs" />
+    <Compile Include="Enums\ItemType.cs" />
+    <Compile Include="Enums\RegistrationType.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
