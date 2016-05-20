@@ -41,18 +41,29 @@ namespace EcosystemUserJourneys.LoadTesting.LoadTest
             {
                 Parallel.For(1, maxNumberOfUsers, i =>
                 {
-                    var data = new DataCollectionModel { StartTime = DateTime.UtcNow, TestName = MethodBase.GetCurrentMethod().Name };
+                    var data = new DataCollectionModel
+                    {
+                        StartTime = DateTime.UtcNow,
+                        TestName = MethodBase.GetCurrentMethod().Name
+                    };
+                    try
+                    {
+                        var userJourneyManager = new UserJourneyManager("chrome");
+                        var user = new UserCreationHelper().BasicUser;
+                        userJourneyManager.RegisterOnReebonz(user, RegistrationType.ViaEmail);
+                        userJourneyManager.BuyItems(numberOfItems, itemType);
 
-                    var userJourneyManager = new UserJourneyManager("chrome");
-                    var user = new UserCreationHelper().BasicUser;
-                    userJourneyManager.RegisterOnReebonz(user, RegistrationType.ViaEmail);
-                    userJourneyManager.BuyItems(numberOfItems, itemType);
-
-                    data.EndTime = DateTime.UtcNow;
-                    data.TotalTimeInSeconds = (data.EndTime - data.StartTime).Seconds;
-                    data.SuccessfulResult = CheckResult(user);
-                    DataCollector.DataModelCollection.Add(data);
-                    userJourneyManager.Driver.Quit();
+                        data.EndTime = DateTime.UtcNow;
+                        data.TotalTimeInSeconds = (data.EndTime - data.StartTime).Seconds;
+                        data.SuccessfulResult = CheckResult(user);
+                        DataCollector.DataModelCollection.Add(data);
+                        userJourneyManager.Driver.Quit();
+                    }
+                    catch (Exception)
+                    {
+                        data.EndTime = DateTime.UtcNow;
+                        data.SuccessfulResult = false;
+                    }
                 });
             }
 
