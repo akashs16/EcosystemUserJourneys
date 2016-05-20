@@ -56,6 +56,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Identifiers\HomePageIdentifiers.cs" />
+    <Compile Include="Identifiers\RegistrationOverlay.cs" />
     <Compile Include="PageObjects\SignInAndRegistrationPageObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
