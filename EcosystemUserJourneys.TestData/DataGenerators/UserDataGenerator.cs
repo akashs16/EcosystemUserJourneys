@@ -12,7 +12,7 @@ namespace EcosystemUserJourneys.TestData.DataGenerators
 
         public const string LastName = "Reebonz";
 
-        public static string EmailAddress => DateTime.UtcNow.ToString("yyMMddhhmmss") + EMAIL_POST_FIX;
+        public static string EmailAddress => Guid.NewGuid().ToString("N") + EMAIL_POST_FIX;
 
         public static string Name => USER_NAME + DateTime.UtcNow.ToString("yyMMddhhmmss").Substring(0, 5);
     }
