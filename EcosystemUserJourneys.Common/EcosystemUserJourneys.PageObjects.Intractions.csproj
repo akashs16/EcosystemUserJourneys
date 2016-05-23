@@ -59,6 +59,12 @@
     <Compile Include="FlowManagers\UserJourneyManager.cs" />
     <Compile Include="Identifiers\HomePageIdentifiers.cs" />
     <Compile Include="Identifiers\RegistrationOverlay.cs" />
+    <Compile Include="PageObjects\BasePageObject.cs" />
+    <Compile Include="PageObjects\CategoryResultPageObject.cs" />
+    <Compile Include="PageObjects\CategorySearchResultPageObject.cs" />
+    <Compile Include="PageObjects\CheckoutPageObject.cs" />
+    <Compile Include="PageObjects\HomePagePageObject.cs" />
+    <Compile Include="PageObjects\ShoppingCartPageObject.cs" />
     <Compile Include="PageObjects\SignInAndRegistrationPageObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

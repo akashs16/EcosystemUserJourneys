@@ -3,39 +3,14 @@ using System.Configuration;
 using EcosystemUserJourneys.PageObjects.Intractions.Identifiers;
 using EcosystemUserJourneys.TestData;
 using EcosystemUserJourneys.TestData.Model;
-using OpenQA.Selenium;
 using WebDriverAutomationFramework;
 
 namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
-    public class SignInAndRegistrationPageObjects
+    public class SignInAndRegistrationPageObjects : BasePageObject
     {
-        private readonly IProvidePageObjectBaseFunctions baseFunctions;
-        public readonly IWebDriver Driver;
-
-        public SignInAndRegistrationPageObjects(string driver)
+        public SignInAndRegistrationPageObjects(string driver) : base(driver)
         {
-            if (string.IsNullOrEmpty(driver))
-            {
-                throw new Exception("driver name not cannot create Driver instance");
-            }
-
-            var factory = new BaseOperationsFactory();
-            this.baseFunctions = factory.Create(driver);
-            this.Driver = baseFunctions.Driver;
-        }
-
-        public void OpenWebPage(string url)
-        {
-            var key = this.baseFunctions.GetAppropriateName(url, typeof(Constants)).ToString();
-            var stringUrl = ConfigurationManager.AppSettings.Get(key);
-            var navigationUri = new Uri(stringUrl);
-            this.baseFunctions.NavigateToUrl(navigationUri);
-        }
-
-        public void OpenWebPage(Uri navigationUri)
-        {
-            this.baseFunctions.NavigateToUrl(navigationUri);
         }
 
         public void RegisterViaEmail(Uri url, User user)

@@ -31,8 +31,8 @@ namespace EcosystemUserJourneys.LoadTesting.LoadTest
             this.path = GetPath() + "\\results-" + DateTime.UtcNow.ToString("yyyyMMdd-hhmmssff") + ".json";
         }
 
-        [TestCase(4, ItemType.MarketPlace)]
-        public void UserRegistrationAndBuyingItems(int numberOfItems, ItemType itemType)
+        [TestCase(4, ProductCategoryType.Men)]
+        public void UserRegistrationAndBuyingItems(int numberOfItems, ProductCategoryType productCategoryType)
         {
 
             var testStopWatch = new Stopwatch();
@@ -51,7 +51,7 @@ namespace EcosystemUserJourneys.LoadTesting.LoadTest
                         var userJourneyManager = new UserJourneyManager("chrome");
                         var user = new UserCreationHelper().BasicUser;
                         userJourneyManager.RegisterOnReebonz(user, RegistrationType.ViaEmail);
-                        userJourneyManager.BuyItems(numberOfItems, itemType);
+                        userJourneyManager.BuyItemsFromCategory(numberOfItems, productCategoryType);
 
                         data.EndTime = DateTime.UtcNow;
                         data.TotalTimeInSeconds = (data.EndTime - data.StartTime).Seconds;
