@@ -39,7 +39,7 @@ namespace EcosystemUserJourneys.LoadTesting.LoadTest
             testStopWatch.Start();
             while (testStopWatch.Elapsed < TimeSpan.FromMinutes(timeToRun))
             {
-                Parallel.For(1, maxNumberOfUsers, i =>
+                Parallel.For(0, maxNumberOfUsers, i =>
                 {
                     var data = new DataCollectionModel
                     {
@@ -51,7 +51,7 @@ namespace EcosystemUserJourneys.LoadTesting.LoadTest
                         var userJourneyManager = new UserJourneyManager("chrome");
                         var user = new UserCreationHelper().BasicUser;
                         userJourneyManager.RegisterOnReebonz(user, RegistrationType.ViaEmail);
-                        userJourneyManager.BuyItemsFromCategory(numberOfItems, productCategoryType);
+                        userJourneyManager.BuyItemsFromCategory(numberOfItems, productCategoryType, user);
 
                         data.EndTime = DateTime.UtcNow;
                         data.TotalTimeInSeconds = (data.EndTime - data.StartTime).Seconds;
@@ -59,8 +59,9 @@ namespace EcosystemUserJourneys.LoadTesting.LoadTest
                         DataCollector.DataModelCollection.Add(data);
                         userJourneyManager.Driver.Quit();
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
+                        Console.WriteLine(e);
                         data.EndTime = DateTime.UtcNow;
                         data.SuccessfulResult = false;
                     }

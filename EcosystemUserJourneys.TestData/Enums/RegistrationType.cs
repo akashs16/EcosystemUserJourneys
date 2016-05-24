@@ -2,7 +2,7 @@
 {
     public enum RegistrationType
     {
-        ViaEmail = 1,
-        ViaFacebook = 2
+        ViaEmail = 0,
+        ViaFacebook = 1
     }
 }

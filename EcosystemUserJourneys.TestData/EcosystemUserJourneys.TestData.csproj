@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Faker.NET4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Faker.Net.1.0.3\lib\net40\Faker.NET4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,13 +45,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="DataGenerators\UserDataGenerator.cs" />
+    <Compile Include="DataSetupHelpers\PaymentDataSetter.cs" />
     <Compile Include="DataSetupHelpers\UserCreationHelper.cs" />
     <Compile Include="Enums\ItemType.cs" />
     <Compile Include="Enums\ProductCategoryType.cs" />
     <Compile Include="Enums\RegistrationType.cs" />
+    <Compile Include="Model\CardPayment.cs" />
+    <Compile Include="Model\ExpiryDetails.cs" />
+    <Compile Include="Model\ShippingAddress.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

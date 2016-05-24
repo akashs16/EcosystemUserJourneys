@@ -8,10 +8,10 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
     public class BasePageObject
     {
-        public IProvidePageObjectBaseFunctions baseFunctions;
-        public IWebDriver Driver { get; set; }
+        public readonly IProvidePageObjectBaseFunctions BaseFunctions;
+        public IWebDriver Driver { get; private set; }
 
-        public BasePageObject(string driver)
+        protected BasePageObject(string driver)
         {
             if (string.IsNullOrEmpty(driver))
             {
@@ -19,21 +19,27 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
             }
 
             var factory = new BaseOperationsFactory();
-            this.baseFunctions = factory.Create(driver);
-            this.Driver = baseFunctions.Driver;
+            this.BaseFunctions = factory.Create(driver);
+            this.Driver = BaseFunctions.Driver;
+        }
+
+        protected BasePageObject(IWebDriver driver, IProvidePageObjectBaseFunctions baeBaseFunctions)
+        {
+            this.Driver = driver;
+            this.BaseFunctions = baeBaseFunctions;
         }
 
         public void OpenWebPage(string url)
         {
-            var key = this.baseFunctions.GetMatchingPropertyName(url, typeof(Constants)).ToString();
+            var key = this.BaseFunctions.GetMatchingPropertyName(url, typeof(Constants)).ToString();
             var stringUrl = ConfigurationManager.AppSettings.Get(key);
             var navigationUri = new Uri(stringUrl);
-            this.baseFunctions.NavigateToUrl(navigationUri);
+            this.BaseFunctions.NavigateToUrl(navigationUri);
         }
 
         public void OpenWebPage(Uri navigationUri)
         {
-            this.baseFunctions.NavigateToUrl(navigationUri);
+            this.BaseFunctions.NavigateToUrl(navigationUri);
         }
     }
 }

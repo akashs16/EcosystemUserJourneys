@@ -36,7 +36,7 @@ namespace EcosystemUserJourneys.AcceptanceTests.Steps
         public void WhenITryToBuyNumbersOfItemsFromReebonzMerchant(int numberOfItems, string itemTypeFromFeature)
         {
             var itemType = EnumValueForString<ItemType>(itemTypeFromFeature);
-            this.userJourneyManager.BuyItemsFromCategory(numberOfItems, ProductCategoryType.Women);
+            this.userJourneyManager.BuyItemsFromCategory(numberOfItems, ProductCategoryType.Women, this.user);
         }
 
         [Then(@"I should be successfully be able to by the item or items")]

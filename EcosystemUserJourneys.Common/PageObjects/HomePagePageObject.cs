@@ -1,5 +1,5 @@
-﻿using System;
-using EcosystemUserJourneys.TestData.Enums;
+﻿using OpenQA.Selenium;
+using WebDriverAutomationFramework;
 
 namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
@@ -9,11 +9,7 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
         {
         }
 
-        public void OpenMenCategory(string category)
-        {     
-        }
-
-        public void OpenWomenCategory(string category)
+        public HomePagePageObject(IWebDriver driver, IProvidePageObjectBaseFunctions baseFunctions) : base(driver, baseFunctions)
         {
         }
     }

@@ -1,11 +1,11 @@
-﻿using EcosystemUserJourneys.TestData.DataGenerators;
+﻿using System;
 using EcosystemUserJourneys.TestData.Model;
 
 namespace EcosystemUserJourneys.TestData.DataSetupHelpers
 {
     public class UserCreationHelper
     {
-        public User BasicUser { get; set; }
+        public User BasicUser { get; private set; }
 
         public UserCreationHelper()
         {
@@ -16,10 +16,20 @@ namespace EcosystemUserJourneys.TestData.DataSetupHelpers
         {
             return new User()
             {
-                EmailAddress = UserDataGenerator.EmailAddress,
-                FirstName = UserDataGenerator.Name,
-                LastName = UserDataGenerator.LastName,
-                Password = UserDataGenerator.Password
+                EmailAddress = "Reebonz" + Guid.NewGuid().ToString("N") + "@Reebonz.com",
+                FirstName = Faker.Name.First(),
+                LastName = Faker.Name.Last(),
+                Password = "P@ssword@123",
+                PhoneNumber = Faker.Phone.Number(),
+                Address = new ShippingAddress()
+                {
+                    AddressLineOne = Faker.Address.StreetName(),
+                    AddressLineTwo = Faker.Address.StreetSuffix(),
+                    AddressLineThree = Faker.Address.StreetAddress(),
+                    Country = "Singapore",
+                    PostalCode = Faker.Address.ZipCode(),
+                    TownOrCity = "Singapore",
+                }
             };
         }
     }

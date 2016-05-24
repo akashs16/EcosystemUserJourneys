@@ -2,8 +2,8 @@
 {
     public enum ItemType
     {
-        Reebonz = 1,
-        Closets = 2,
-        MarketPlace = 3
+        Reebonz = 0,
+        Closets = 1,
+        MarketPlace = 2
     }
 }

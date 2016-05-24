@@ -6,7 +6,7 @@
 
         public const string ShippingInputsId = "shipping-address-inputs";
 
-        public const string NameId = "Name";
+        public const string NameId = "FirstName";
 
         public const string StreetAddressLineOneId = "Line1";
 
@@ -19,5 +19,7 @@
         public const string PostalCodeId = "PostalCode";
 
         public const string CountryDropDownId = "CountryId";
+
+        public const string SaveAddressButtonCss = "#address-form > div.row > div > button";
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using EcosystemUserJourneys.PageObjects.Intractions.Enums;
 using EcosystemUserJourneys.PageObjects.Intractions.PageObjects;
 using EcosystemUserJourneys.TestData.Enums;
 using EcosystemUserJourneys.TestData.Model;
@@ -11,9 +12,8 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
     {
         private readonly SignInAndRegistrationPageObjects signInAndRegistrationPageObject;
         private readonly Uri baseUrl;
-        private readonly HomePagePageObject homePagePageObject;
-        private readonly CategoryResultPageObject categoryResultPageObject;
-        private readonly ShoppingCartPageObject shoppingCartPageObject;
+        private readonly CategorySearchResultPageObject categorySearchResultPageObject;
+        private readonly HeaderPageObject headerPageObject;
         private readonly CheckoutPageObject checkoutPageObject;
         public IWebDriver Driver { get; private set; }
 
@@ -21,31 +21,30 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
         {
             this.signInAndRegistrationPageObject = new SignInAndRegistrationPageObjects(driver);
             this.Driver = this.signInAndRegistrationPageObject.Driver;
-
-            this.homePagePageObject = new HomePagePageObject(driver);
-            this.categoryResultPageObject = new CategoryResultPageObject(driver);
-            this.shoppingCartPageObject = new ShoppingCartPageObject(driver);
-            this.checkoutPageObject = new CheckoutPageObject(driver);
+            var baseFunction = this.signInAndRegistrationPageObject.BaseFunctions;
+            this.categorySearchResultPageObject = new CategorySearchResultPageObject(this.Driver, baseFunction);
+            this.headerPageObject = new HeaderPageObject(this.Driver, baseFunction);
+            this.checkoutPageObject = new CheckoutPageObject(this.Driver, baseFunction);
 
             this.baseUrl = new Uri(ConfigurationManager.ConnectionStrings["LandingPage"].ConnectionString);
         }
 
-        public void BuyItemsFromCategory(int numberOfItems, ProductCategoryType cateogryType)
+        public void BuyItemsFromCategory(int numberOfItems, ProductCategoryType cateogryType, User user)
         {
             switch (cateogryType)
             {
                 case ProductCategoryType.Men:
-                    this.homePagePageObject.OpenMenCategory("watches");
+                    this.headerPageObject.OpenMenCategory("watches");
                     break;
                 case ProductCategoryType.Women:
-                    this.homePagePageObject.OpenWomenCategory("watches");
+                    this.headerPageObject.OpenWomenCategory("watches");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(cateogryType), cateogryType, null);
             }
-            this.categoryResultPageObject.AddItemsToCart(numberOfItems);
-            this.shoppingCartPageObject.ProceedToCheckout();
-            this.checkoutPageObject.Checkout();
+            this.categorySearchResultPageObject.AddItemsToCart(numberOfItems);
+            this.headerPageObject.ProceedToCheckout();
+            this.checkoutPageObject.Checkout(true, true, true, PaymentMethod.Cards, user);
         }
 
         public void RegisterOnReebonz(User userDetails, RegistrationType registrationType)
