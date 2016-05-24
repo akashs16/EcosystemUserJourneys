@@ -11,7 +11,7 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
         {
         }
 
-        public void RegisterViaEmail(Uri url, User user)
+        public void RegisterViaEmail(User user)
         {
             this.baseFunctions.ClickOnElement(HomePageIdentifiers.RegistrationLinkCss, WebElementType.CssSelector, TimeSpan.FromSeconds(2));
             this.baseFunctions.WaitForLoad(RegistrationOverlay.RegistrationModalClass, WebElementType.Class, TimeSpan.FromSeconds(3));

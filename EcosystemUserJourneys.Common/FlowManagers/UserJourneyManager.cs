@@ -54,7 +54,7 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
             switch (registrationType)
             {
                 case RegistrationType.ViaEmail:
-                    signInAndRegistrationPageObject.RegisterViaEmail(baseUrl, userDetails);
+                    signInAndRegistrationPageObject.RegisterViaEmail(userDetails);
                     break;
                 case RegistrationType.ViaFacebook:
                     break;
