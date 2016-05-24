@@ -25,7 +25,7 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 
         public void OpenWebPage(string url)
         {
-            var key = this.baseFunctions.GetAppropriateName(url, typeof(Constants)).ToString();
+            var key = this.baseFunctions.GetMatchingPropertyName(url, typeof(Constants)).ToString();
             var stringUrl = ConfigurationManager.AppSettings.Get(key);
             var navigationUri = new Uri(stringUrl);
             this.baseFunctions.NavigateToUrl(navigationUri);

@@ -2,16 +2,16 @@
 {
     public static class RegistrationOverlay
     {
-        public const string RegistrationModal = "modal-content";
+        public const string RegistrationModalClass = "modal-content";
 
-        public const string FirstNameTextField = "FirstName";
+        public const string FirstNameTextFieldId = "FirstName";
 
-        public const string LastNameTextField = "LastName";
+        public const string LastNameTextFieldId = "LastName";
 
-        public const string EmailTextField = "Email";
+        public const string EmailTextFieldId = "Email";
 
-        public const string PassowrdTextField= "Password";
+        public const string PassowrdTextFieldId= "Password";
 
-        public const string ConfirmPasswordTextField = "ConfirmPassword";
+        public const string ConfirmPasswordTextFieldId = "ConfirmPassword";
     }
 }
