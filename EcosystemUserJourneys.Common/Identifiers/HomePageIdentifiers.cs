@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.Identifiers
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.Identifiers
 {
     public static class HomePageIdentifiers
     {

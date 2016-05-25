@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.PageObjects
 {
     using System;
     using System.Linq;

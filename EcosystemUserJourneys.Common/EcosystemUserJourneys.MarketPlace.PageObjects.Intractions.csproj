@@ -7,8 +7,8 @@
     <ProjectGuid>{2A359BC1-F528-4C8E-96AC-B413BE817EED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EcosystemUserJourneys.PageObjects.Intractions</RootNamespace>
-    <AssemblyName>EcosystemUserJourneys.PageObjects.Intractions</AssemblyName>
+    <RootNamespace>EcosystemUserJourneys.MarketPlace.PageObjects.Intractions</RootNamespace>
+    <AssemblyName>EcosystemUserJourneys.MarketPlace.PageObjects.Intractions</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

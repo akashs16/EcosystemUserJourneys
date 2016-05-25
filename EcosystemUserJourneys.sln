@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.Accep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.MarketPlace.UserUsageTesting", "EcosystemUserJourneysLoadTesting\EcosystemUserJourneys.MarketPlace.UserUsageTesting.csproj", "{A252D757-F2F7-4DAB-9B75-BCD908B7D766}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.PageObjects.Intractions", "EcosystemUserJourneys.Common\EcosystemUserJourneys.PageObjects.Intractions.csproj", "{2A359BC1-F528-4C8E-96AC-B413BE817EED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.MarketPlace.PageObjects.Intractions", "EcosystemUserJourneys.Common\EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.csproj", "{2A359BC1-F528-4C8E-96AC-B413BE817EED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.TestData", "EcosystemUserJourneys.TestData\EcosystemUserJourneys.TestData.csproj", "{644E5C32-9E4B-4D72-AB0B-365E8CCEE47A}"
 EndProject

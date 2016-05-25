@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.Identifiers.Checkout
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.Identifiers.Checkout
 {
     public static class AddNewShippingAddressIdentifiers
     {

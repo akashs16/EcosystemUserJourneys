@@ -1,7 +1,7 @@
 ﻿namespace EcosystemUserJourneys.AcceptanceTests.Steps
 {
     using System;
-    using PageObjects.Intractions.FlowManagers;
+    using MarketPlace.PageObjects.Intractions.FlowManagers;
     using TechTalk.SpecFlow;
     using TestData.DataSetupHelpers;
     using TestData.Enums;

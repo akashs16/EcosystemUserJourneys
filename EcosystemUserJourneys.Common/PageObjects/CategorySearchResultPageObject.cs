@@ -1,9 +1,8 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.PageObjects
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Threading;
     using Identifiers;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Support.UI;

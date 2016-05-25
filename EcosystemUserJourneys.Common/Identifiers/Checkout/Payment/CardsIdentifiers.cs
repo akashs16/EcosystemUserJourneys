@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.Identifiers.Checkout.Payment
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.Identifiers.Checkout.Payment
 {
     public static class CardsIdentifiers
     {

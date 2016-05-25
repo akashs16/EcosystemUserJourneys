@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.FlowManagers
 {
     using System;
     using System.Configuration;

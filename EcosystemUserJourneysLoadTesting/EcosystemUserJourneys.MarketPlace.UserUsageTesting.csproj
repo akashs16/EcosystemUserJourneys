@@ -54,8 +54,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataCollection\DataCollectionModel.cs" />
-    <Compile Include="DataCollection\DataCollector.cs" />
     <Compile Include="Tests\UserJourneysUsageTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,9 +62,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EcosystemUserJourneys.Common\EcosystemUserJourneys.PageObjects.Intractions.csproj">
+    <ProjectReference Include="..\EcosystemUserJourneys.Common\EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.csproj">
       <Project>{2a359bc1-f528-4c8e-96ac-b413be817eed}</Project>
-      <Name>EcosystemUserJourneys.PageObjects.Intractions</Name>
+      <Name>EcosystemUserJourneys.MarketPlace.PageObjects.Intractions</Name>
     </ProjectReference>
     <ProjectReference Include="..\EcosystemUserJourneys.TestData\EcosystemUserJourneys.TestData.csproj">
       <Project>{644e5c32-9e4b-4d72-ab0b-365e8ccee47a}</Project>

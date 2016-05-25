@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.Enums
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.Enums
 {
     public enum PaymentMethod
     {

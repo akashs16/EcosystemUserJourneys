@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="DataCollection\DataCollectionModel.cs" />
+    <Compile Include="DataCollection\DataCollector.cs" />
     <Compile Include="DataSetupHelpers\PaymentDataSetter.cs" />
     <Compile Include="DataSetupHelpers\UserCreationHelper.cs" />
     <Compile Include="Enums\ItemType.cs" />

@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.PageObjects
 {
     using System;
     using System.Configuration;
@@ -20,7 +20,7 @@
 
             var factory = new BaseOperationsFactory();
             this.BaseFunctions = factory.Create(driver);
-            this.Driver = BaseFunctions.Driver;
+            this.Driver = this.BaseFunctions.Driver;
         }
 
         protected BasePageObject(IWebDriver driver, IProvidePageObjectBaseFunctions baeBaseFunctions)
