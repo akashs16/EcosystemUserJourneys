@@ -5,6 +5,7 @@
     using Enums;
     using OpenQA.Selenium;
     using PageObjects;
+    using TestData.DataSetupHelpers;
     using TestData.Enums;
     using TestData.Model;
 
@@ -45,7 +46,9 @@
             }
             this.categorySearchResultPageObject.AddItemsToCart(numberOfItems);
             this.headerPageObject.ProceedToCheckout();
-            this.checkoutPageObject.Checkout(true, true, true, PaymentMethod.Cards, user);
+            this.checkoutPageObject.Checkout(true, true, true, PaymentMethod.Card, user);
+            var paymentDataSetter = new PaymentDataSetter();
+            this.checkoutPageObject.PerformCardPayment(paymentDataSetter.GetCardPaymentDetails(user.FullName));
         }
 
         public void RegisterOnReebonz(User userDetails, RegistrationType registrationType)

@@ -9,7 +9,7 @@
 
         public UserCreationHelper()
         {
-            BasicUser = CreateBasicUser();
+            this.BasicUser = CreateBasicUser();
         }
 
         private static User CreateBasicUser()
@@ -20,7 +20,7 @@
                 FirstName = Faker.Name.First(),
                 LastName = Faker.Name.Last(),
                 Password = "P@ssword@123",
-                PhoneNumber = Faker.Phone.Number(),
+                PhoneNumber = "81343456",
                 Address = new ShippingAddress()
                 {
                     AddressLineOne = Faker.Address.StreetName(),

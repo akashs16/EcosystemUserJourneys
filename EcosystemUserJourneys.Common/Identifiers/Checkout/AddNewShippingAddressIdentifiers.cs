@@ -6,7 +6,7 @@
 
         public const string ShippingInputsId = "shipping-address-inputs";
 
-        public const string NameId = "FirstName";
+        public const string NameId = "Name";
 
         public const string StreetAddressLineOneId = "Line1";
 

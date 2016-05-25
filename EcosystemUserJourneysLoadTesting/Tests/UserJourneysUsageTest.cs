@@ -31,10 +31,10 @@
             this.path = GetPath() + "\\results-" + DateTime.UtcNow.ToString("yyyyMMdd-hhmmssff") + ".json";
         }
 
-        [TestCase(4, ProductCategoryType.Men)]
+        [TestCase(2, ProductCategoryType.Men)]
         public void UserRegistrationAndBuyingItems(int numberOfItems, ProductCategoryType productCategoryType)
         {
-
+            var userJourneyManager = new UserJourneyManager("chrome");
             var testStopWatch = new Stopwatch();
             testStopWatch.Start();
             while (testStopWatch.Elapsed < TimeSpan.FromMinutes(this.timeToRun))
@@ -48,7 +48,6 @@
                     };
                     try
                     {
-                        var userJourneyManager = new UserJourneyManager("chrome");
                         var user = new UserCreationHelper().BasicUser;
                         userJourneyManager.RegisterOnReebonz(user, RegistrationType.ViaEmail);
                         userJourneyManager.BuyItemsFromCategory(numberOfItems, productCategoryType, user);
@@ -56,14 +55,17 @@
                         data.EndTime = DateTime.UtcNow;
                         data.TotalTimeInSeconds = (data.EndTime - data.StartTime).Seconds;
                         data.SuccessfulResult = CheckResult(user);
-                        DataCollector.DataModelCollection.Add(data);
-                        userJourneyManager.Driver.Quit();
                     }
                     catch (Exception e)
                     {
                         Console.WriteLine(e);
                         data.EndTime = DateTime.UtcNow;
                         data.SuccessfulResult = false;
+                    }
+                    finally
+                    {
+                        DataCollector.DataModelCollection.Add(data);
+                        userJourneyManager.Driver.Quit();
                     }
                 });
             }

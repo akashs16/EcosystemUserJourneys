@@ -4,6 +4,8 @@
     {
         public const string CheckoutAddressesId = "checkout-addresses";
 
+        public const string CheckoutPageId = "checkout-form";
+
         public const string AddNewAddressCss = "#checkout-addresses > div > div > a";
 
         public const string DiscountCodeTextFieldId = "discount-code";
@@ -14,7 +16,7 @@
 
         public const string CheckoutPaymentMethodsId = "checkout-payment-methods";
 
-        public const string GetAllPaymentMethodsCss = "#checkout-payment-methods > div > div.col-md-7>div.payment-method>input";
+        public const string GetAllPaymentMethodsCss = "#checkout-payment-methods > div > div.col-md-7> div.payment-method > div.payment-method-selector > div > label";
 
         public const string GetAllItemsLinksFromCheckoutCss = "#checkout-items > div:nth-child(1) > div > div > div > table > tbody tr> td.checkout-description > h3 > a";
 

@@ -13,5 +13,7 @@
         public string Password { get; set; }
 
         public ShippingAddress Address { get; set; }
+
+        public string FullName => this.FirstName + " " + this.LastName;
     }
 }
