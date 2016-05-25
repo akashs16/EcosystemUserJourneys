@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.PageO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.TestData", "EcosystemUserJourneys.TestData\EcosystemUserJourneys.TestData.csproj", "{644E5C32-9E4B-4D72-AB0B-365E8CCEE47A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.Phoenix.UserUsageTesting", "EcosystemUserJourneys.Phoenix.UserUsageTesting\EcosystemUserJourneys.Phoenix.UserUsageTesting.csproj", "{9D204D08-9EF2-48A5-AA95-409C384934AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{644E5C32-9E4B-4D72-AB0B-365E8CCEE47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{644E5C32-9E4B-4D72-AB0B-365E8CCEE47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{644E5C32-9E4B-4D72-AB0B-365E8CCEE47A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D204D08-9EF2-48A5-AA95-409C384934AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D204D08-9EF2-48A5-AA95-409C384934AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D204D08-9EF2-48A5-AA95-409C384934AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D204D08-9EF2-48A5-AA95-409C384934AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

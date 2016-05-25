@@ -7,7 +7,7 @@
     using System.IO;
     using System.Reflection;
     using System.Threading.Tasks;
-    using MarketPlace.UserUsageTesting.DataCollection;
+    using DataCollection;
     using Newtonsoft.Json;
     using NUnit.Framework;
     using PageObjects.Intractions.FlowManagers;
