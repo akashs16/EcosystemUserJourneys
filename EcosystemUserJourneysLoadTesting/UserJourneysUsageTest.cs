@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.MarketPlace.UserUsageTesting.Tests
+﻿namespace EcosystemUserJourneys.MarketPlace.UserUsageTesting
 {
     using System;
     using System.Collections.Generic;
@@ -11,6 +11,7 @@
     using Newtonsoft.Json;
     using NUnit.Framework;
     using PageObjects.Intractions.FlowManagers;
+    using TestData.DataCollection;
     using TestData.DataSetupHelpers;
     using TestData.Enums;
     using TestData.Model;
@@ -58,7 +59,7 @@
                     }
                     catch (Exception e)
                     {
-                        Console.WriteLine(e);
+                        data.Exception = e.Message + "\n" + e.StackTrace;
                         data.EndTime = DateTime.UtcNow;
                         data.SuccessfulResult = false;
                     }

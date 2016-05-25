@@ -54,6 +54,7 @@
     <Compile Include="Enums\RegistrationType.cs" />
     <Compile Include="Model\CardPayment.cs" />
     <Compile Include="Model\ExpiryDetails.cs" />
+    <Compile Include="Model\Gender.cs" />
     <Compile Include="Model\ShippingAddress.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

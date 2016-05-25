@@ -15,5 +15,7 @@
         public ShippingAddress Address { get; set; }
 
         public string FullName => this.FirstName + " " + this.LastName;
+
+        public Gender Gender { get; set; }
     }
 }

@@ -21,6 +21,7 @@
                 LastName = Faker.Name.Last(),
                 Password = "P@ssword@123",
                 PhoneNumber = "81343456",
+                Gender = Gender.Male,
                 Address = new ShippingAddress()
                 {
                     AddressLineOne = Faker.Address.StreetName(),

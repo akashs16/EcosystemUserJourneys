@@ -4,13 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A252D757-F2F7-4DAB-9B75-BCD908B7D766}</ProjectGuid>
+    <ProjectGuid>{D96D5551-6AE9-4F75-967D-BF5CC93AEA76}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EcosystemUserJourneys.MarketPlace.UserUsageTesting</RootNamespace>
-    <AssemblyName>EcosystemUserJourneys.MarketPlace.UserUsageTesting</AssemblyName>
+    <RootNamespace>EcosystemUserJourneys.Phoenix.PageObjects.Intractions</RootNamespace>
+    <AssemblyName>EcosystemUserJourneys.Phoenix.PageObjects.Intractions</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,14 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="nunit.framework, Version=3.2.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.2.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -52,26 +46,54 @@
       <HintPath>..\packages\Selenium.WebDriver.2.53.0\lib\net40\WebDriver.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="WebDriver.Support, Version=2.53.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.2.53.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriverAutomationFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebdriverAutomationFramework.1.1.5\lib\net452\WebDriverAutomationFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserJourneysUsageTest.cs" />
+    <Compile Include="PageObjects\ActionCarriedOutOn.cs" />
+    <Compile Include="PageObjects\BasePageObject.cs" />
+    <Compile Include="PageObjects\HeaderPageObjects.cs" />
+    <Compile Include="PageObjects\LandingPagePageObjects.cs" />
+    <Compile Include="PageObjects\Selectors\HeaderSelectors.cs" />
+    <Compile Include="PageObjects\Selectors\HomePageSelectors.cs" />
+    <Compile Include="PageObjects\Selectors\RegistrationPopupSelectors.cs" />
+    <Compile Include="UserJourneyManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EcosystemUserJourneys.Common\EcosystemUserJourneys.MarketPlace.PageObjects.Intractions.csproj">
-      <Project>{2a359bc1-f528-4c8e-96ac-b413be817eed}</Project>
-      <Name>EcosystemUserJourneys.MarketPlace.PageObjects.Intractions</Name>
-    </ProjectReference>
     <ProjectReference Include="..\EcosystemUserJourneys.TestData\EcosystemUserJourneys.TestData.csproj">
       <Project>{644e5c32-9e4b-4d72-ab0b-365e8ccee47a}</Project>
       <Name>EcosystemUserJourneys.TestData</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Drivers\chromedriver.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Drivers\IEDriverServer.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Drivers\wires-0.6.2-win.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MSBuildTasks.1.5.0.183\build\MSBuildTasks.targets" Condition="Exists('..\packages\MSBuildTasks.1.5.0.183\build\MSBuildTasks.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSBuildTasks.1.5.0.183\build\MSBuildTasks.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSBuildTasks.1.5.0.183\build\MSBuildTasks.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

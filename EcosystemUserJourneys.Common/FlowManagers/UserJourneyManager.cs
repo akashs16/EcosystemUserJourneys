@@ -28,7 +28,7 @@
             this.headerPageObject = new HeaderPageObject(this.Driver, baseFunction);
             this.checkoutPageObject = new CheckoutPageObject(this.Driver, baseFunction);
 
-            this.baseUrl = new Uri(ConfigurationManager.ConnectionStrings["LandingPage"].ConnectionString);
+            this.baseUrl = new Uri(ConfigurationManager.ConnectionStrings["HomePage"].ConnectionString);
         }
 
         public void BuyItemsFromCategory(int numberOfItems, ProductCategoryType cateogryType, User user)
