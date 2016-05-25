@@ -34,13 +34,13 @@
         [TestCase(2, ProductCategoryType.Men)]
         public void UserRegistrationAndBuyingItems(int numberOfItems, ProductCategoryType productCategoryType)
         {
-            var userJourneyManager = new UserJourneyManager("chrome");
             var testStopWatch = new Stopwatch();
             testStopWatch.Start();
             while (testStopWatch.Elapsed < TimeSpan.FromMinutes(this.timeToRun))
             {
                 Parallel.For(0, this.maxNumberOfUsers, i =>
                 {
+                    var userJourneyManager = new UserJourneyManager("chrome");
                     var data = new DataCollectionModel
                     {
                         StartTime = DateTime.UtcNow,
