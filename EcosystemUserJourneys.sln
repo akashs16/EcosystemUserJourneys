@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.AcceptaneTests", "EcosystemUserJourneys\EcosystemUserJourneys.AcceptaneTests.csproj", "{2142DA9D-215B-47FE-B136-9B257588DBD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.UserUsageTesting", "EcosystemUserJourneysLoadTesting\EcosystemUserJourneys.UserUsageTesting.csproj", "{A252D757-F2F7-4DAB-9B75-BCD908B7D766}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.MarketPlace.UserUsageTesting", "EcosystemUserJourneysLoadTesting\EcosystemUserJourneys.MarketPlace.UserUsageTesting.csproj", "{A252D757-F2F7-4DAB-9B75-BCD908B7D766}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcosystemUserJourneys.PageObjects.Intractions", "EcosystemUserJourneys.Common\EcosystemUserJourneys.PageObjects.Intractions.csproj", "{2A359BC1-F528-4C8E-96AC-B413BE817EED}"
 EndProject

@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.UserUsageTesting.DataCollection
+﻿namespace EcosystemUserJourneys.MarketPlace.UserUsageTesting.DataCollection
 {
     using System;
 

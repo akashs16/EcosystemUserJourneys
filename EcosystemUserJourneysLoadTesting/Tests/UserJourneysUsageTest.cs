@@ -1,4 +1,4 @@
-﻿namespace EcosystemUserJourneys.UserUsageTesting.Tests
+﻿namespace EcosystemUserJourneys.MarketPlace.UserUsageTesting.Tests
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +7,7 @@
     using System.IO;
     using System.Reflection;
     using System.Threading.Tasks;
-    using DataCollection;
+    using MarketPlace.UserUsageTesting.DataCollection;
     using Newtonsoft.Json;
     using NUnit.Framework;
     using PageObjects.Intractions.FlowManagers;
