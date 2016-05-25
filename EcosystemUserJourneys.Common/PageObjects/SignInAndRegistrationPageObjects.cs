@@ -1,10 +1,10 @@
-﻿using System;
-using EcosystemUserJourneys.PageObjects.Intractions.Identifiers;
-using EcosystemUserJourneys.TestData.Model;
-using WebDriverAutomationFramework;
-
-namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
+    using System;
+    using Identifiers;
+    using TestData.Model;
+    using WebDriverAutomationFramework;
+
     public class SignInAndRegistrationPageObjects : BasePageObject
     {
         public SignInAndRegistrationPageObjects(string driver) : base(driver)

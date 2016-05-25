@@ -1,8 +1,8 @@
-﻿using System;
-using EcosystemUserJourneys.TestData.Model;
-
-namespace EcosystemUserJourneys.TestData.DataSetupHelpers
+﻿namespace EcosystemUserJourneys.TestData.DataSetupHelpers
 {
+    using System;
+    using Model;
+
     public class PaymentDataSetter
     {
         public CardPayment GetCardPaymentDetails()

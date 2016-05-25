@@ -1,13 +1,13 @@
-﻿using System;
-using System.Configuration;
-using EcosystemUserJourneys.PageObjects.Intractions.Enums;
-using EcosystemUserJourneys.PageObjects.Intractions.PageObjects;
-using EcosystemUserJourneys.TestData.Enums;
-using EcosystemUserJourneys.TestData.Model;
-using OpenQA.Selenium;
-
-namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
+﻿namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
 {
+    using System;
+    using System.Configuration;
+    using Enums;
+    using OpenQA.Selenium;
+    using PageObjects;
+    using TestData.Enums;
+    using TestData.Model;
+
     public class UserJourneyManager
     {
         private readonly SignInAndRegistrationPageObjects signInAndRegistrationPageObject;
@@ -15,7 +15,8 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
         private readonly CategorySearchResultPageObject categorySearchResultPageObject;
         private readonly HeaderPageObject headerPageObject;
         private readonly CheckoutPageObject checkoutPageObject;
-        public IWebDriver Driver { get; private set; }
+
+        public IWebDriver Driver { get; }
 
         public UserJourneyManager(string driver)
         {
@@ -49,11 +50,11 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.FlowManagers
 
         public void RegisterOnReebonz(User userDetails, RegistrationType registrationType)
         {
-            signInAndRegistrationPageObject.OpenWebPage(baseUrl);
+            this.signInAndRegistrationPageObject.OpenWebPage(this.baseUrl);
             switch (registrationType)
             {
                 case RegistrationType.ViaEmail:
-                    signInAndRegistrationPageObject.RegisterViaEmail(userDetails);
+                    this.signInAndRegistrationPageObject.RegisterViaEmail(userDetails);
                     break;
                 case RegistrationType.ViaFacebook:
                     break;

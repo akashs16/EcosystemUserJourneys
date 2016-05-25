@@ -1,13 +1,13 @@
-﻿using System;
-using System.Linq;
-using EcosystemUserJourneys.PageObjects.Intractions.Enums;
-using EcosystemUserJourneys.PageObjects.Intractions.Identifiers.Checkout;
-using EcosystemUserJourneys.TestData.Model;
-using OpenQA.Selenium;
-using WebDriverAutomationFramework;
-
-namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
+    using System;
+    using System.Linq;
+    using Enums;
+    using Identifiers.Checkout;
+    using OpenQA.Selenium;
+    using TestData.Model;
+    using WebDriverAutomationFramework;
+
     public class CheckoutPageObject : BasePageObject
     {
         public CheckoutPageObject(string driver) : base(driver)
@@ -22,22 +22,21 @@ namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
         {
             if (addAddress)
             {
-                AddNewAddress(user);
+                this.AddNewAddress(user);
             }
 
             if (addDiscount)
             {
-                AddNewDiscount();
+                this.AddNewDiscount();
             }
 
             if (addContactNumber)
             {
-                AddNewContactNumber(user);
+                this.AddNewContactNumber(user);
             }
 
-            SelectPayment(paymentMethod);
-
-            PerformCheckout();
+            this.SelectPayment(paymentMethod);
+            this.PerformCheckout();
         }
 
         private void PerformCheckout()

@@ -1,12 +1,12 @@
-﻿using System;
-using EcosystemUserJourneys.PageObjects.Intractions.FlowManagers;
-using EcosystemUserJourneys.TestData.DataSetupHelpers;
-using EcosystemUserJourneys.TestData.Enums;
-using EcosystemUserJourneys.TestData.Model;
-using TechTalk.SpecFlow;
-
-namespace EcosystemUserJourneys.AcceptanceTests.Steps
+﻿namespace EcosystemUserJourneys.AcceptanceTests.Steps
 {
+    using System;
+    using PageObjects.Intractions.FlowManagers;
+    using TechTalk.SpecFlow;
+    using TestData.DataSetupHelpers;
+    using TestData.Enums;
+    using TestData.Model;
+
     [Binding]
     public class SignInAndRegistrationSteps
     {
@@ -20,7 +20,7 @@ namespace EcosystemUserJourneys.AcceptanceTests.Steps
         }
 
         [Given(@"I am a first time Reebonz user")]
-        public void GivenIAmAFirstTimeReebonzUser()
+        public void GivenIamAFirstTimeReebonzUser()
         {
             var userCreationHelper = new UserCreationHelper();
             this.user = userCreationHelper.BasicUser;

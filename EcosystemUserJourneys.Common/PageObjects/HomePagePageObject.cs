@@ -1,8 +1,8 @@
-﻿using OpenQA.Selenium;
-using WebDriverAutomationFramework;
-
-namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
+    using OpenQA.Selenium;
+    using WebDriverAutomationFramework;
+
     public class HomePagePageObject:BasePageObject
     {
         public HomePagePageObject(string driver) : base(driver)

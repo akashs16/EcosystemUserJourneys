@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace EcosystemUserJourneys.LoadTesting.DataCollection
+﻿namespace EcosystemUserJourneys.UserUsageTesting.DataCollection
 {
+    using System.Collections.Generic;
+
     public static class DataCollector
     {
         public static List<DataCollectionModel> DataModelCollection { get; set; }

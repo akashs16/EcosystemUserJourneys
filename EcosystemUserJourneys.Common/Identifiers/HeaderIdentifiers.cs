@@ -1,6 +1,6 @@
 ﻿namespace EcosystemUserJourneys.PageObjects.Intractions.Identifiers
 {
-    public class HeaderIdentifiers
+    public static class HeaderIdentifiers
     {
         public const string MiniBasketProceedToCheckoutCss = "div.minibasket > div > div > div.actions > a.btn.btn-secondary";
 

@@ -1,6 +1,6 @@
 ﻿namespace EcosystemUserJourneys.TestData
 {
-    public class Constants
+    public static class Constants
     {
         public static string User => "User";
         public static string Browser => "Browser";

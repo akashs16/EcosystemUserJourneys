@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace EcosystemUserJourneys.LoadTesting.DataCollection
+﻿namespace EcosystemUserJourneys.UserUsageTesting.DataCollection
 {
+    using System;
+
     public class DataCollectionModel
     {
         public string TestName { get; set; }

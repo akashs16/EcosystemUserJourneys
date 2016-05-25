@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using EcosystemUserJourneys.PageObjects.Intractions.Identifiers;
-using OpenQA.Selenium;
-using WebDriverAutomationFramework;
-
-namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Identifiers;
+    using OpenQA.Selenium;
+    using WebDriverAutomationFramework;
+
     public class CategorySearchResultPageObject : BasePageObject
     {
-        public List<string> ProductLinks { get; set; }
+        public List<string> ProductLinks { get; }
 
         public CategorySearchResultPageObject(string driver) : base(driver)
         {

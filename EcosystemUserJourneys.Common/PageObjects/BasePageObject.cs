@@ -1,11 +1,11 @@
-﻿using System;
-using System.Configuration;
-using EcosystemUserJourneys.TestData;
-using OpenQA.Selenium;
-using WebDriverAutomationFramework;
-
-namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
+    using System;
+    using System.Configuration;
+    using OpenQA.Selenium;
+    using TestData;
+    using WebDriverAutomationFramework;
+
     public class BasePageObject
     {
         public readonly IProvidePageObjectBaseFunctions BaseFunctions;

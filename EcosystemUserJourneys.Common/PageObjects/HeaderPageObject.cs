@@ -1,11 +1,11 @@
-﻿using System;
-using System.Linq;
-using EcosystemUserJourneys.PageObjects.Intractions.Identifiers;
-using OpenQA.Selenium;
-using WebDriverAutomationFramework;
-
-namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
+﻿namespace EcosystemUserJourneys.PageObjects.Intractions.PageObjects
 {
+    using System;
+    using System.Linq;
+    using Identifiers;
+    using OpenQA.Selenium;
+    using WebDriverAutomationFramework;
+
     public class HeaderPageObject : BasePageObject
     {
         public HeaderPageObject(string driver) : base(driver)

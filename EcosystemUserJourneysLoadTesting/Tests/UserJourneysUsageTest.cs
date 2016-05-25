@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.IO;
-using System.Reflection;
-using System.Threading.Tasks;
-using EcosystemUserJourneys.LoadTesting.DataCollection;
-using EcosystemUserJourneys.PageObjects.Intractions.FlowManagers;
-using EcosystemUserJourneys.TestData.DataSetupHelpers;
-using EcosystemUserJourneys.TestData.Enums;
-using EcosystemUserJourneys.TestData.Model;
-using Newtonsoft.Json;
-using NUnit.Framework;
-using NUnit.Framework.Compatibility;
-
-namespace EcosystemUserJourneys.LoadTesting.LoadTest
+﻿namespace EcosystemUserJourneys.UserUsageTesting.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Diagnostics;
+    using System.IO;
+    using System.Reflection;
+    using System.Threading.Tasks;
+    using DataCollection;
+    using Newtonsoft.Json;
+    using NUnit.Framework;
+    using PageObjects.Intractions.FlowManagers;
+    using TestData.DataSetupHelpers;
+    using TestData.Enums;
+    using TestData.Model;
+
     [TestFixture]
-    public class UserJourneysLoadTest
+    public class UserJourneysUsageTest
     {
         private int maxNumberOfUsers;
         private double timeToRun;
@@ -37,9 +37,9 @@ namespace EcosystemUserJourneys.LoadTesting.LoadTest
 
             var testStopWatch = new Stopwatch();
             testStopWatch.Start();
-            while (testStopWatch.Elapsed < TimeSpan.FromMinutes(timeToRun))
+            while (testStopWatch.Elapsed < TimeSpan.FromMinutes(this.timeToRun))
             {
-                Parallel.For(0, maxNumberOfUsers, i =>
+                Parallel.For(0, this.maxNumberOfUsers, i =>
                 {
                     var data = new DataCollectionModel
                     {
