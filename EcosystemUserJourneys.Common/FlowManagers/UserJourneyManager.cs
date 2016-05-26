@@ -11,7 +11,7 @@
 
     public class UserJourneyManager
     {
-        private readonly SignInAndRegistrationPageObjects signInAndRegistrationPageObject;
+        private readonly SignInAndRegistrationPageObject signInAndRegistrationPageObject;
         private readonly Uri baseUrl;
         private readonly CategorySearchResultPageObject categorySearchResultPageObject;
         private readonly HeaderPageObject headerPageObject;
@@ -21,7 +21,7 @@
 
         public UserJourneyManager(string driver)
         {
-            this.signInAndRegistrationPageObject = new SignInAndRegistrationPageObjects(driver);
+            this.signInAndRegistrationPageObject = new SignInAndRegistrationPageObject(driver);
             this.Driver = this.signInAndRegistrationPageObject.Driver;
             var baseFunction = this.signInAndRegistrationPageObject.BaseFunctions;
             this.categorySearchResultPageObject = new CategorySearchResultPageObject(this.Driver, baseFunction);

@@ -51,7 +51,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WebDriverAutomationFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebdriverAutomationFramework.1.1.5\lib\net452\WebDriverAutomationFramework.dll</HintPath>
+      <HintPath>..\packages\WebdriverAutomationFramework.1.1.8\lib\net452\WebDriverAutomationFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -72,7 +72,7 @@
     <Compile Include="PageObjects\HeaderPageObject.cs" />
     <Compile Include="PageObjects\HomePagePageObject.cs" />
     <Compile Include="PageObjects\ShoppingCartPageObject.cs" />
-    <Compile Include="PageObjects\SignInAndRegistrationPageObjects.cs" />
+    <Compile Include="PageObjects\SignInAndRegistrationPageObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

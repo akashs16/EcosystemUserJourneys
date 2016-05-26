@@ -32,29 +32,11 @@
                 var addToCartElement = this.BaseFunctions.GetElement(product, WebElementType.CssSelector,
                     CategorySearchResultPageIdentifiers.ProdcutAddToCartCss);
                 this.ProductLinks.Add(this.BaseFunctions.GetAttribute(product, CategorySearchResultPageIdentifiers.ProductLinkCss, WebElementType.CssSelector, "href").ToString());
-                this.CheckAndMoveToElement(product, addToCartElement);
+                this.BaseFunctions.MoveToElementWithRetries(product, addToCartElement);
+                this.BaseFunctions.ClickOnElement(addToCartElement, TimeSpan.FromSeconds(2));
             }
 
             this.BaseFunctions.WaitForUnload(HeaderIdentifiers.MiniBasketProceedToCheckoutCss, WebElementType.CssSelector, TimeSpan.FromSeconds(10), true);
-        }
-
-        private void CheckAndMoveToElement(IWebElement product, IWebElement webElement, int numberOfRetries = 5)
-        {
-            while (numberOfRetries > 0)
-            {
-                try
-                {
-                    this.BaseFunctions.MoveToElement(product);
-                    var wait = new WebDriverWait(this.BaseFunctions.Driver, TimeSpan.FromSeconds(5));
-                    wait.Until(x => (webElement.Displayed && webElement.Enabled));
-                    this.BaseFunctions.ClickOnElement(webElement, TimeSpan.FromSeconds(2));
-                    break;
-                }
-                catch (WebDriverTimeoutException)
-                {
-                    this.CheckAndMoveToElement(product, webElement, numberOfRetries--);
-                }
-            }
         }
     }
 }

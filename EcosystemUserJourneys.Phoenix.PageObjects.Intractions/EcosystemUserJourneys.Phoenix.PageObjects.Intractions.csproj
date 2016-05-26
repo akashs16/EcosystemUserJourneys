@@ -51,17 +51,20 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WebDriverAutomationFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WebdriverAutomationFramework.1.1.5\lib\net452\WebDriverAutomationFramework.dll</HintPath>
+      <HintPath>..\packages\WebdriverAutomationFramework.1.1.8\lib\net452\WebDriverAutomationFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageObjects\ActionCarriedOutOn.cs" />
     <Compile Include="PageObjects\BasePageObject.cs" />
-    <Compile Include="PageObjects\HeaderPageObjects.cs" />
+    <Compile Include="PageObjects\CategorySearchResultsPageObject.cs" />
+    <Compile Include="PageObjects\HeaderPageObject.cs" />
     <Compile Include="PageObjects\LandingPagePageObjects.cs" />
+    <Compile Include="PageObjects\Selectors\CategorySearchResultsPageSelectors.cs" />
     <Compile Include="PageObjects\Selectors\HeaderSelectors.cs" />
     <Compile Include="PageObjects\Selectors\HomePageSelectors.cs" />
+    <Compile Include="PageObjects\Selectors\QuickViewSelectors.cs" />
     <Compile Include="PageObjects\Selectors\RegistrationPopupSelectors.cs" />
     <Compile Include="UserJourneyManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

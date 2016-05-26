@@ -5,9 +5,9 @@
     using TestData.Model;
     using WebDriverAutomationFramework;
 
-    public class SignInAndRegistrationPageObjects : BasePageObject
+    public class SignInAndRegistrationPageObject : BasePageObject
     {
-        public SignInAndRegistrationPageObjects(string driver) : base(driver)
+        public SignInAndRegistrationPageObject(string driver) : base(driver)
         {
         }
 
